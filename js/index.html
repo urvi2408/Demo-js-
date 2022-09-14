@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <p id="1" >urvi</p>
+     <p id="21" >dhruv</p>
+     
+     <p class="2">grena</p>
+     <p class="3">neelam</p>
+
+     <button type="button" id="btn" onclick="myfun()">click me</button>
+     <button type="button" id="btn" onclick="myfun2()">click me</button>
+     <!-- <button type="button" id="btn" >click me</button> -->
+<script>
+// program to print a sentence
+// passing string
+console.log("I love JS");
+
+
+// 5 is assigned to variable x
+let d= 5; 
+console.log(d); // 5
+        
+
+const number1 = 3/0;
+console.log(number1); // Infinity
+const number2 = -3/0;
+console.log(number2); // -Infinity
+// strings can't be divided by numbers
+const number3 = "abc"/3; 
+console.log(number3);  // NaN
+
+
+const nam = 'ram';
+typeof(nam); // returns "string"
+const number = 4;
+typeof(number); //returns "number"
+const valueChecked = true;
+typeof(valueChecked); //returns "boolean"
+const b = null;
+typeof(b); // returns "object"
+
+
+let x = 5;
+let y = 3;
+// addition
+console.log('x + y = ', x + y);  // 8
+// subtraction
+console.log('x - y = ', x - y);  // 2
+// multiplication
+console.log('x * y = ', x * y);  // 15
+// division
+console.log('x / y = ', x / y);  // 1.6666666666666667
+// remainder
+console.log('x % y = ', x % y);   // 2
+// increment
+console.log('++x = ', ++x); // x is now 6
+console.log('x++ = ', x++); // prints 6 and then increased to 7
+console.log('x = ', x);     // 7
+// decrement
+console.log('--x = ', --x); // x is now 6
+console.log('x-- = ', x--); // prints 6 and then decreased to 5
+console.log('x = ', x);     // 5
+//exponentiation
+console.log('x ** y =', x ** y);
+// equal operator
+console.log(2 == 2); // true
+console.log(2 == '2'); // true
+// not equal operator
+console.log(3 != 2); // true
+console.log('hello' != 'Hello'); // true
+// strict equal operator
+console.log(2 === 2); // true
+console.log(2 === '2'); // false
+// strict not equal operator
+console.log(2 !== '2'); // true
+console.log(2 !== 2); // false
+// logical AND
+console.log(true && true); // true
+console.log(true && false); // false
+// logical OR
+console.log(true || false); // true
+// logical NOT
+console.log(!true); // false
+// concatenation operator
+console.log('hello' + 'world');
+let c = 'JavaScript';
+c += ' tutorial';  // a = a + ' tutorial';
+console.log(c);
+
+
+// numeric string used with + gives string type
+let result1;
+result1= '3' + 2; 
+console.log(result1) // "32"
+result1 = '3' + true; 
+console.log(result1); // "3true"
+result1 = '3' + undefined; 
+console.log(result1); // "3undefined"
+result1 = '3' + null; 
+console.log(result1); // "3null"
+
+
+// numeric string used with - , / , * results number type
+let result2;
+result2 = '4' - '2'; 
+console.log(result2); // 2
+result2 = '4' - 2;
+console.log(result2); // 2
+result2 = '4' * 2;
+console.log(result2); // 8
+result2 = '4' / 2;
+console.log(result2); // 2
+
+
+// non-numeric string used with - , / , * results to NaN
+let result3;
+result3 = 'hello' - 'world';
+console.log(result3); // NaN
+result3 = '4' - 'hello';
+console.log(result3); // NaN
+
+
+// if boolean is used, true is 1, false is 0
+let result4;
+result4 = '4' - true;
+console.log(result4); // 3
+result4 = 4 + true;
+console.log(result4); // 5
+result4 = 4 + false;
+console.log(result4); // 4
+
+
+// null is 0 when used with number
+let result5;
+result5 = 4 + null;
+console.log(result5);  // 4
+result5 = 4 - null;
+console.log(result5);  // 4
+
+
+// Arithmetic operation of undefined with number, boolean or null gives NaN
+let result6;
+result6 = 4 + undefined;
+console.log(result6);  // NaN
+result6 = 4 - undefined;
+console.log(result6);  // NaN
+result6 = true + undefined;
+console.log(result6);  // NaN
+result6 = null + undefined;
+console.log(result6);  // NaN
+
+
+let result7;
+// string to number
+result7 = Number('324');
+console.log(result7); // 324
+result7 = Number('324e-1')  
+console.log(result7); // 32.4
+// boolean to number
+result7 = Number(true);
+console.log(result7); // 1
+result7 = Number(false);
+console.log(result7); // 0
+
+
+let result8;
+result8 = Number(null);
+console.log(result8);  // 0
+result8 = Number(' ')
+console.log(result8);  // 0
+
+
+let result9;
+result9 = Number('hello');
+console.log(result9); // NaN
+result9 = Number(undefined);
+console.log(result9); // NaN
+result9 = Number(NaN);
+console.log(result9); // NaN
+
+
+let result10;
+result10 = parseInt('20.01');
+console.log(result10); // 20
+result10 = parseFloat('20.01');
+console.log(result10); // 20.01
+result10 = +'20.01';
+console.log(result10); // 20.01
+result10 = Math.floor('20.01');
+console.log(result10); // 20
+
+
+//number to string
+let result11;
+result11 = String(324);
+console.log(result11);  // "324"
+result11 = String(2 + 4);
+console.log(result11); // "6"
+//other data types to string
+result11 = String(null);
+console.log(result11); // "null"
+result11 = String(undefined);
+console.log(result11); // "undefined
+result11 = String(NaN);
+console.log(result11); // "NaN"
+result11 = String(true);
+console.log(result11); // "true"
+result11 = String(false);
+console.log(result11); // "false"
+// using toString()
+result11 = (324).toString();
+console.log(result11); // "324"
+result11 = true.toString();
+console.log(result11); // "true"
+
+
+let result12;
+result12 = Boolean('');
+console.log(result12); // false
+result12 = Boolean(0);
+console.log(result12); // false
+result12 = Boolean(undefined);
+console.log(result12); // false
+result12 = Boolean(null);
+console.log(result12); // false
+result12 = Boolean(NaN);
+console.log(result12); // false
+result12 = Boolean(324);
+console.log(result12); // true
+result12 = Boolean('hello');
+console.log(result12); // true
+result12 = Boolean(' ');
+console.log(result12); // true
+
+
+const a = 5, b = 2, c = 'hello';
+// equal to operator
+console.log(a == 5);     // true
+console.log(b == '2');   // true
+console.log(c == 'Hello');  // false
+
+
+
+
+
+        var array=[];
+        array[0]="urvi";
+        array[1]="grena";
+        array[2]="neelam";
+        document.write(array);
+        document.write("<br>");
+
+        document.write(array[0]);
+        document.write("<br>");
+
+        document.write(array[1]);
+        document.write("<br>");
+
+        document.write(array[2]);
+        document.write("<br>");
+
+
+        var array2=['urvi','grena','neelam'];
+        document.write(array2);
+
+        var length=array2.length;
+        document.write("<br>");
+        document.write(length);
+        document.write("<br>");
+
+        array2.sort();
+        document.write(array2);
+        document.write("<br>");
+
+        array2.push("dhruv");
+        document.write(array2);
+        document.write("<br>");
+
+        array2.pop();
+        document.write(array2);
+        document.write("<br>");
+
+        array2.shift();
+        document.write(array2);
+        document.write("<br>");
+
+        array2.unshift();
+        document.write(array2);
+        document.write("<br>");
+
+        array2.reverse();
+        document.write(array2);
+        document.write("<br>");
+
+        var check=Array.isArray(array2);
+        document.write(check);
+        document.write("<br>");
+
+
+        var array3=["1","2","3"];
+        document.write(array2.concat(array3));
+        document.write("<br>");
+
+
+        document.write(array2.indexOf("urvi"));
+        document.write("<br>");
+
+
+        var name= prompt("what is your name");
+        if(name!=""){
+            document.write("nice to meet you"+name);
+        }
+
+
+        var a=document.getElementById(1).innerHTML;
+        document.write(a);
+
+        var a=document.getElementsByClassName("2")[0].innerHTML;
+        document.write(a);
+
+        var tag=document.createElement("h1");
+        var text=document.createTextNode("good morning");
+        tag.appendChild(text);
+        console.log(text);
+        document.body.appendChild(tag);
+
+
+
+        document.getElementById("1").style.color="red";
+
+
+        document.getElementById("21").setAttribute("style","color=blue;background-color:grey;text-align:center;" );
+
+
+        // <button type="button" id="btn" onclick="myfun()">click me
+       function myfun(){
+        document.location.assign("https://www.youtube.com/");
+       }
+
+       function myfun2(){
+        document.location="https://www.youtube.com/";
+       }
+
+
+       const textForStorage = 'Hello World.'
+       localStorage.setItem('my-key', textForStorage);
+       const textFromStorage = localStorage.getItem('my-key');
+       document.write(textFromStorage);
+
+    //     const wait =() => {
+    //     console.log("js part is starting");
+    //     let start = new Date().getTime();
+    //     console.log(new Date().getTime()-start);
+    //     whiile(new Date().getTime()-start<5000);
+    //     console.log("all right is done");
+    //    }
+    //    btn.addEventListener()
+        
+
+
+        
+    </script>
+</body>
+</html>
